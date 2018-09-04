@@ -3,11 +3,11 @@ Using Max Entropy algorithm to predict the Name Entity Tag of the token in sente
 
 Author: Yuanxu Wu  
 
-Prerequisites  
+## Prerequisites  
 1. python 2.7.13  
 2. java 1.8.0  
 
-How to compile and run  
+## How to compile and run  
 1. get into the "code" folder in terminal (using cd code)  
 2. javac -cp ".:maxent-3.0.0.jar:trove.jar" MEtrain.java  
 3. javac -cp ".:maxent-3.0.0.jar:trove.jar" MEtag.java  
@@ -21,7 +21,7 @@ How to compile and run
    for example, java -cp ".:maxent-3.0.0.jar:trove.jar" MEtag CONLL_dev_test_ENHANCED_FEATURE.txt maxEntModel response.name  
 8. python score.name.py   
 
-The outcome on development corpus  
+## The outcome on development corpus  
 50240 out of 51578 tags correct  
   accuracy: 97.41  
 5917 groups in key  
@@ -31,7 +31,7 @@ The outcome on development corpus
   recall:    83.78  
   F1:        82.08  
 
-Local Features:  
+## Local Features:  
 1. case feature   
     The case feature contains initial case is upper or lower, all upper case or not, case sequence feature.  
 2. tag feature  
@@ -67,7 +67,7 @@ Advanced Features: the final feature used in generate advanced feature txt
 
 the other features I tried but didn't use in generating advanced feature are the features will generate negative improvement.  
 
-Tried Feature Set:  
+## Tried Feature Set:  
 prev_init_case_F : the initial case of the previous token  
 curr_init_case_F : the initial case of current token  
 next_init_case_F : the initial case of next token  
